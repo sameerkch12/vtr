@@ -15,7 +15,7 @@ const toNumber = '+918109543070'; // Fixed number for outgoing calls
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
-app.get('/makeCall', (req, res) => {
+app.post('/makeCall', (req, res) => {
   client.calls.create({
     to: toNumber,
     from: twilioNumber,
