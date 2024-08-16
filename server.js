@@ -21,7 +21,7 @@ app.get('/makeCall', (req, res) => {
     from: twilioNumber,
     twiml: `<Response>
              <Play>https://sa-5550.twil.io/audio.mp3</Play>
-             <Gather action="https://vtr-8vir.onrender.com/handleGather" method="POST">
+             <Gather action="/handleGather" method="POST">
              </Gather>
              <Say> not give any response </Say>
            </Response>`,
