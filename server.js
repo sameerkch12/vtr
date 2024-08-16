@@ -6,11 +6,11 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
+const accountSid = 'ACa3bd7fa7f3cc8d02fa77803be95607ad';
+const authToken = '854ff1e1bde93c33b149ec404f470537';
 const client = new twilio(accountSid, authToken);
 
-const twilioNumber = process.env.TWILIO_NUMBER;
+const twilioNumber = '+12515511081';
 const toNumber = '+918109543070'; // Fixed number for outgoing calls
 app.get('/', (req, res) => {
   res.send('Hello World!')
